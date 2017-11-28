@@ -12,24 +12,15 @@ import CoreData
 
 @objc(Note)
 public class Note: NSManagedObject {
-    var date:Date?{
-        get{
-            return rawDateCreated as Date?
-        }
-        set{
-            rawDateCreated = newValue as NSDate?
-        }
-    }
 
-    convenience init?(body: String, date: Date?) {
+    convenience init?(body: String) {
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
         guard let managedContext = appDelegate?.persistentContainer.viewContext else{
             return nil
         }
         self.init(entity: Note.entity(), insertInto: managedContext)
         
-        self.title = body.count > 10 ? String(body.prefix(11)) : body
+        self.title = body.count > 24 ? String(body.prefix(25)) : body
         self.body = body
-        self.date = date
     }
 }

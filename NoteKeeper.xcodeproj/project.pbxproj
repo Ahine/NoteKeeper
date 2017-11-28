@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A23EC1261FCD121800551BB4 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23EC1251FCD121800551BB4 /* NotesViewController.swift */; };
+		A23EC1281FCD129F00551BB4 /* NoteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23EC1271FCD129F00551BB4 /* NoteDetailViewController.swift */; };
 		A2FB66FF1FCA34F000E3081C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FB66FE1FCA34F000E3081C /* AppDelegate.swift */; };
-		A2FB67011FCA34F000E3081C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FB67001FCA34F000E3081C /* ViewController.swift */; };
 		A2FB67041FCA34F000E3081C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2FB67021FCA34F000E3081C /* Main.storyboard */; };
 		A2FB67071FCA34F000E3081C /* NoteKeeper.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A2FB67051FCA34F000E3081C /* NoteKeeper.xcdatamodeld */; };
 		A2FB67091FCA34F000E3081C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2FB67081FCA34F000E3081C /* Assets.xcassets */; };
@@ -18,9 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A23EC1251FCD121800551BB4 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
+		A23EC1271FCD129F00551BB4 /* NoteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailViewController.swift; sourceTree = "<group>"; };
 		A2FB66FB1FCA34F000E3081C /* NoteKeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoteKeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2FB66FE1FCA34F000E3081C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A2FB67001FCA34F000E3081C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A2FB67031FCA34F000E3081C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A2FB67061FCA34F000E3081C /* NoteKeeper.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NoteKeeper.xcdatamodel; sourceTree = "<group>"; };
 		A2FB67081FCA34F000E3081C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -63,12 +65,13 @@
 				A2FB67131FCA357200E3081C /* Note+CoreDataClass.swift */,
 				A2FB67141FCA357200E3081C /* Note+CoreDataProperties.swift */,
 				A2FB66FE1FCA34F000E3081C /* AppDelegate.swift */,
-				A2FB67001FCA34F000E3081C /* ViewController.swift */,
 				A2FB67021FCA34F000E3081C /* Main.storyboard */,
 				A2FB67081FCA34F000E3081C /* Assets.xcassets */,
 				A2FB670A1FCA34F000E3081C /* LaunchScreen.storyboard */,
 				A2FB670D1FCA34F000E3081C /* Info.plist */,
 				A2FB67051FCA34F000E3081C /* NoteKeeper.xcdatamodeld */,
+				A23EC1251FCD121800551BB4 /* NotesViewController.swift */,
+				A23EC1271FCD129F00551BB4 /* NoteDetailViewController.swift */,
 			);
 			path = NoteKeeper;
 			sourceTree = "<group>";
@@ -145,8 +148,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2FB67011FCA34F000E3081C /* ViewController.swift in Sources */,
+				A23EC1281FCD129F00551BB4 /* NoteDetailViewController.swift in Sources */,
 				A2FB67151FCA357200E3081C /* Note+CoreDataClass.swift in Sources */,
+				A23EC1261FCD121800551BB4 /* NotesViewController.swift in Sources */,
 				A2FB66FF1FCA34F000E3081C /* AppDelegate.swift in Sources */,
 				A2FB67071FCA34F000E3081C /* NoteKeeper.xcdatamodeld in Sources */,
 				A2FB67161FCA357200E3081C /* Note+CoreDataProperties.swift in Sources */,
