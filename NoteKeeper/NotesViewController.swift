@@ -39,7 +39,39 @@ class NotesViewController: UITableViewController {
             print("Fetch could not be performed.")
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destination = segue.destination as? NoteDetailViewController,
+            let selectedRow = self.notesTableView.indexPathForSelectedRow?.row else{
+                return
+        }
+        
+        destination.existingNote = notes[selectedRow]
+    }
+    
+    func deleteNote(at indexPath: IndexPath){
+        let note = notes[indexPath.row]
+        
+        if let managedContext = note.managedObjectContext{
+            managedContext.delete(note)
+            
+            do{
+                try managedContext.save()
+                self.notes.remove(at: indexPath.row)
+                notesTableView.deleteRows(at: [indexPath], with: .automatic)
+            }catch{
+                print("Delete failed.")
+                notesTableView.reloadRows(at: [indexPath], with: .automatic)
+            }
+        }
+    }
 
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if(editingStyle == .delete){
+            deleteNote(at: indexPath)
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

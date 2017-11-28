@@ -69,16 +69,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="C7X-Q3-2dL">
-                                <rect key="frame" x="16" y="89" width="343" height="395"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="C7X-Q3-2dL">
+                                <rect key="frame" x="25" y="89" width="325" height="390"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZ8-Tc-bMC">
-                                <rect key="frame" x="164" y="529" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZ8-Tc-bMC">
+                                <rect key="frame" x="170" y="529" width="34" height="30"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="saveNote:" destination="Vau-Q5-9Mz" eventType="touchUpInside" id="Eco-yo-868"/>
@@ -86,6 +84,14 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="C7X-Q3-2dL" firstAttribute="leading" secondItem="j1P-Xi-LVi" secondAttribute="leading" constant="25" id="4rz-li-DDT"/>
+                            <constraint firstItem="j1P-Xi-LVi" firstAttribute="bottom" secondItem="iZ8-Tc-bMC" secondAttribute="bottom" constant="108" id="C1L-40-rOa"/>
+                            <constraint firstItem="iZ8-Tc-bMC" firstAttribute="centerX" secondItem="j1P-Xi-LVi" secondAttribute="centerX" id="Mby-nk-2Es"/>
+                            <constraint firstItem="iZ8-Tc-bMC" firstAttribute="top" secondItem="C7X-Q3-2dL" secondAttribute="bottom" constant="50" id="osC-SF-HwD"/>
+                            <constraint firstItem="j1P-Xi-LVi" firstAttribute="trailing" secondItem="C7X-Q3-2dL" secondAttribute="trailing" constant="25" id="xzL-7A-a28"/>
+                            <constraint firstItem="C7X-Q3-2dL" firstAttribute="top" secondItem="j1P-Xi-LVi" secondAttribute="top" constant="25" id="z6G-Mg-MTc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="j1P-Xi-LVi"/>
                     </view>
                     <connections>

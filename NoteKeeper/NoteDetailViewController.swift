@@ -12,9 +12,12 @@ class NoteDetailViewController: UIViewController {
 
     @IBOutlet weak var bodyText: UITextView!
     
+    var existingNote: Note?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        bodyText.text = existingNote?.body
         // Do any additional setup after loading the view.
     }
 
@@ -27,7 +30,17 @@ class NoteDetailViewController: UIViewController {
     @IBAction func saveNote(_ sender: Any) {
         let body = bodyText.text ?? ""
         
-        if let note = Note(body: body){
+        var note: Note?
+        
+        if let existingNote = existingNote{
+            existingNote.body = body
+            existingNote.title = body.count > 24 ? String(body.prefix(25)) : body
+            note = existingNote
+        }else{
+            note = Note(body: body)
+        }
+        
+        if let note = note{
             do{
                 let managedContext = note.managedObjectContext
                 try managedContext?.save()
